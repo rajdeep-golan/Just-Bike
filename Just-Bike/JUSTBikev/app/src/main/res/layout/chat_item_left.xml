@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="300dp"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageChat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/biker2"/>
+    <LinearLayout
+        android:id="@+id/chatLinearLayout"
+        android:layout_toRightOf="@id/profileImageChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/messgeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@drawable/background_night_message"
+        android:padding="6dp"
+        android:textSize="20dp"
+        android:text="Name"
+        android:fontFamily="@font/nexalight"
+        />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="6dp"
+        android:background="@drawable/background_night_message"
+        android:id="@+id/messageImage"
+        android:src="@drawable/cbr250r"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/messageTime"
+        android:layout_alignParentEnd="true"
+        android:textSize="10dp"
+        android:layout_below="@+id/chatLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time/Date"/>
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/sign_up_bg"
+    android:layout_height="match_parent"
+    tools:context=".SignInAcitivity">
+
+    <ImageView
+        android:id="@+id/back_ground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:src="@drawable/bg_overlay" />
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="808dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="159dp"
+        android:layout_marginTop="40dp"
+        android:alpha="1"
+        android:src="@drawable/just_logo" />
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/countryCodePicker"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showFlag="true"
+        app:ccp_showNameCode="true"
+        app:ccp_showFullName="true"
+        app:ccp_showPhoneCode="true"
+        android:padding="4dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/bg"
+        android:layout_centerHorizontal="true"
+        app:ccp_contentColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="809dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/countryCodePicker"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/ic_local_phone_white_24dp"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/montserrat"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:paddingLeft="25dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="16dp" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="809dp"
+                android:layout_height="60dp"
+                android:textSize="16dp"
+                android:drawablePadding="16dp"
+                android:layout_below="@+id/phone"
+                android:hint="Password"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                android:textColorHint="@color/colorWhite"
+                android:textColor="@color/white"
+               android:paddingLeft="25dp"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_bg"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/forgetPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_below="@+id/password"
+        android:layout_alignEnd="@+id/password"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="-4dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Forgot Password?"
+        android:textColor="@color/white" />
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/rememberMeCheckBox"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/forgetPass"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Material.Drawable.CheckBox"
+        app:cbd_strokeColor="@android:color/white"
+        app:cbd_tickColor="@color/colorPrimaryDark"
+        android:text="Remember Me"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/SignUp">
+    <ImageView
+        android:id="@+id/uploadCV"
+        android:layout_width="353dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/image_btn_onclick"
+        android:textAllCaps="false"
+        android:textSize="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:text="Login"
+           />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_above="@+id/viewLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Create New Account"
+        android:textColor="@color/colorWhite" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignStart="@+id/SignUp"
+        android:layout_alignEnd="@+id/SignUp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AccountFragment">
+
+    <View
+        android:id="@+id/guidline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/guidline"/>
+
+    <ImageView
+        android:id="@+id/ellipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ellipse"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-100dp"
+        android:layout_marginBottom="-100dp" />
+    <ImageView
+        android:id="@+id/isVerified"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/attention"
+        android:layout_alignParentRight="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/tvName"
+        android:layout_centerHorizontal="true"
+        android:src="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Your Name"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:text="youremail@gmail.com"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/guidline">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Description"
+                android:textColor="@color/btn_red_bg"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableRight="@drawable/ic_edit_red_24dp"/>
+
+            <TextView
+                android:id="@+id/tvDesc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My name is Karan"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/tvDesc"
+                android:layout_alignLeft="@+id/tvDesc"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/tvMyArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDesc1"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="My Articles"
+                android:textColor="@color/btn_red_bg"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableRight="@drawable/ic_add_red_24dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMyArticle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/tvMyArticle"/>
+            <!--<TextView-->
+                <!--android:id="@+id/tvMyDocs"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/rvMyArticle"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="Upload Documents"-->
+                <!--android:textColor="@color/btn_red_bg"-->
+                <!--android:textStyle="bold"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:textSize="20dp"/>-->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_status">
+        <item>Placed</item>
+        <item>On my Way</item>
+        <item>Given!</item>
+        <item>Receiving</item>
+        <item>Completed</item>
+    </string-array>
+</resources>

@@ -1,0 +1,241 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            storePassword '9334390656@Ka'
+            keyAlias 'key0'
+            keyPassword '9334390656@Ka'
+          storeFile file('/Users/rajdeepsinghgolan/Desktop/JbKeyStore')
+        }
+      config {
+        storePassword '9334390656@Ka'
+        keyAlias 'key0'
+        keyPassword '9334390656@Ka'
+        storeFile file('/Users/rajdeepsinghgolan/Desktop/JbKeyStore')
+      }
+    }
+    compileSdkVersion 29
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+  lintOptions {
+    checkReleaseBuilds false
+    // Or, if you prefer, you can continue to check for errors in release builds,
+    // but continue the build even when errors are found:
+    abortOnError false
+  }
+    defaultConfig {
+        applicationId "com.just.justbikev2"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 10
+        versionName "1.2"
+        multiDexEnabled true
+
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+          signingConfig signingConfigs.config
+        }
+    }
+    repositories {
+        google()
+    }
+}
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    //For getting Corona Updates
+    implementation 'com.android.volley:volley:1.1.1'
+
+
+    //For Pinch Zoom Photo
+    implementation 'com.github.chrisbanes:PhotoView:1.2.5'
+
+    //PFD for invoice
+    // implementation 'com.itextpdf:itextg:5.5.10'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    //TabLayout
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    //OTP Country Code , PinView [ box digits ]
+    implementation 'com.hbb20:ccp:2.4.0'
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    //Search Functionality
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
+
+    //RazorPay
+    implementation 'com.razorpay:checkout:1.5.16'
+
+    //1st time upload of documents
+
+    //Working with SQL databases
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+    //to create Text Drawable image
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //Circular Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //FB ACCOUNT KIT
+    implementation 'com.facebook.android:account-kit-sdk:[5,6)'
+    //Design of bikeInfo Page
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    // Facebook dependency
+    implementation 'com.facebook.android:facebook-core:[5,6)'
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+    implementation 'com.facebook.android:facebook-share:[5,6)'
+    implementation 'com.facebook.android:facebook-places:[5,6)'
+    implementation 'com.facebook.android:facebook-messenger:[5,6)'
+    implementation 'com.facebook.android:facebook-applinks:[5,6)'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+    //Picasso Library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+
+
+    // If you want to use the GPU Filters
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+
+    //Firebase UI databases
+    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+
+
+    // Google Dependencies
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    //Spinner
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+
+//    //BarCode
+    implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
+    implementation 'com.google.zxing:core:3.3.0'
+
+    //Firebase
+
+    implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+    implementation 'com.google.firebase:firebase-database:19.3.0'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
+    //Shimmer effect for preloading UI
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //Joda Date Time library
+    implementation 'net.danlew:android.joda:2.10.6'
+
+    //Time Picker library
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    implementation "com.github.firdausmaulan:GlideSlider:1.5.1"
+
+    //FAB counting
+    implementation 'com.github.andremion:counterfab:1.2.2'
+
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    //ProgressBar
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.4'
+
+    //Raing Bar
+    implementation 'com.stepstone.apprating:app-rating:2.3.1'
+
+    //Paypal
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+
+    //Banner Slider
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+
+    implementation "com.github.firdausmaulan:GlideSlider:1.5.1"
+
+    //Address
+    implementation "com.google.android.gms:play-services-maps:17.0.0"
+    implementation "com.google.android.gms:play-services-places:17.0.0"
+    implementation "com.google.android.libraries.places:places:2.3.0"
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // implementation "com.google.android.gms:play-services:17.0.0"
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    //Firebase Messaging
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+    //Image Slider
+    implementation 'com.github.smarteist:autoimageslider:1.3.7'
+    implementation 'com.github.smarteist:autoimageslider:1.3.7-appcompat'
+    //implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.google.gms:google-services:4.3.3'
+
+    implementation 'com.facebook.android:facebook-share:5.15.3'
+
+    //Material Edit TExt
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+  //Perioidic time requests for updating database
+  def work_version = "2.3.4"
+  implementation "androidx.work:work-runtime:$work_version"
+
+    //ML KIT
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+    implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
+
+    //Date and time
+    implementation 'com.google.android.material:material:1.2.0'
+
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+
+    //Paper for keeping Key Value pair
+    implementation 'io.paperdb:paperdb:2.7.1'
+
+    //Request Permissions
+    implementation 'com.karumi:dexter:6.2.1'
+
+    //Materials for UI design
+    implementation 'com.github.rey5137:material:1.3.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

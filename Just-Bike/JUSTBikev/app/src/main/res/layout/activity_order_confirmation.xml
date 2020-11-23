@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sign_up_bg"
+    tools:context=".OrderConfirmation">
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleNav"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/montserrat"
+        android:text="Booking Confirmation"/>
+    <ImageView
+        android:id="@+id/back_ground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:src="@drawable/bg_overlay" />
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        app:cardElevation="10dp"
+        android:id="@+id/cardFull"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="100dp"
+        app:cardUseCompatPadding="true"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBooked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<ImageView
+  android:id="@+id/tick"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_margin="20dp"
+    android:layout_gravity="center_horizontal"
+    android:contentDescription="TODO" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike Booked"
+            android:fontFamily="@font/nexabold"
+
+            android:layout_gravity="center_horizontal"
+            android:textSize="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:gravity="center_horizontal"
+                android:text="Payment has been successfully received. Please contact 8585858586 for any issues. Thank you."
+                android:fontFamily="@font/montserrat"
+                android:layout_gravity="center_horizontal"
+              android:textSize="12dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                />
+
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="Join Our JUST Community"
+        android:textSize="18dp"/>
+    <TextView
+        android:id="@+id/remarkTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/remark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+      android:textSize="12dp"
+      android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Share your photos of the experience and enjoyment you'll do with our premium vehicles. Read and Write articles about Bikes and adventure"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/remarkTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <ImageButton
+                android:id="@+id/trackBtn"
+                android:layout_width="153dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+
+                android:background="@drawable/image_btn_onclick"
+                android:textAllCaps="false"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Track Bike"
+                />
+        </FrameLayout>
+          <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/remarkTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <ImageButton
+              android:id="@+id/downloadPDF"
+              android:layout_width="153dp"
+              android:layout_height="60dp"
+              android:layout_gravity="center_horizontal"
+
+              android:background="@drawable/image_btn_onclick"
+              android:textAllCaps="false"
+              android:textSize="16dp" />
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="16dp"
+              android:fontFamily="@font/montserrat"
+              android:textColor="@color/white"
+              android:drawableLeft="@drawable/ic_baseline_cloud_download_24"
+              android:drawablePadding="4dp"
+              android:text="Receipt"
+              />
+          </FrameLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

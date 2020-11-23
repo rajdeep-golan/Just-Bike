@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:padding="10dp"
+    app:cardElevation="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/phoneET"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/bg"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+          android:drawableTint="@color/btn_red_bg"
+            android:background="@drawable/edit_text_bg"
+          android:backgroundTint="@color/btn_red_bg"
+            android:drawableStart="@drawable/ic_local_phone_white_24dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/montserrat"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:paddingLeft="25dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorDark"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/secureCodeET"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/bg"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+          android:backgroundTint="@color/btn_red_bg"
+          android:background="@drawable/edit_text_bg"
+          android:drawableTint="@color/btn_red_bg"
+          android:drawableStart="@drawable/ic_security_black_24dp"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="20dp"
+            android:hint="Secure Code"
+            android:paddingLeft="25dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorDark"
+            android:textSize="16dp" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:text="Get Password"
+            />
+    </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="140dp"
+  android:orientation="horizontal"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <TextView
+    android:id="@+id/feedback"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="100dp"
+    android:paddingTop="10dp"
+    android:maxLines="5"
+    android:paddingRight="22dp"
+    android:paddingLeft="10dp"
+    android:textColor="@color/black"
+    android:background="@drawable/feedback_tv_bg"
+    android:text="Hello!Here, this is the solution using only Linearlayout.
+
+Key point is: button is consist of two part. Half top and Half bottom. And minus margin means half of your button's height."
+
+    />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/custImage"
+    android:src="@drawable/biker"
+    app:civ_border_color="@color/black"
+    android:layout_alignRight="@id/feedback"
+    app:civ_border_width="2dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="-80dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"/>
+</RelativeLayout>
