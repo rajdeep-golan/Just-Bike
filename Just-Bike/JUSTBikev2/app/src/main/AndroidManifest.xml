@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.just.justbikev2">
+
+  <application
+    android:name=".JustBike"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:screenOrientation="portrait"
+    android:largeHeap="true"
+    android:hardwareAccelerated="true"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    tools:replace="android:roundIcon">
+    <activity android:name=".Admin.ViewContacts"></activity>
+    <activity android:name=".Admin.ViewDocs" />
+    <activity android:name=".Admin.UsersList" />
+      <activity
+    android:name=".PickupPoints"
+    android:screenOrientation="portrait" />
+    <activity
+      android:name=".Careers"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Franchise"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".BikationDetails"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Bikation"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".JbidaWallet"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".ComingSoon"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".AdvertisementDetails"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Admin.OrderNav"
+      android:label="@string/title_activity_order_nav"
+      android:screenOrientation="portrait" />
+    <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+    <activity
+      android:name=".Admin.PickUp"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".ActiveJourney"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".DeliveryClient"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Admin.Delivery"
+      android:screenOrientation="portrait" />
+    <activity android:name=".FullScreenImageActivity" />
+    <activity
+      android:name=".ClientMessageActivity"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Admin.ContactUsAdmin"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".MessageActivity"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".ContactUs"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".TrackingOrderList"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".OrderNavClient"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".PhoneAuthInit"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".UploadDocuments"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".OrderConfirmation"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".Admin.BannerAdmin"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".RateUsActivity"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name=".ShowComments"
+      android:screenOrientation="portrait" />
+    <activity
+      android:name="com.facebook.FacebookActivity"
+      android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+      android:label="@string/app_name" />
+    <activity
+      android:name="com.facebook.CustomTabActivity"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="@string/Facebook_Login_Protocol_Name" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".Admin.OrderDetailAdmin" /> <!-- <meta-data android:name="com.facebook.sdk.ApplicationId" -->
+    <!-- android:value="@string/Facebook_app_Id"/> -->
+    <activity
+      android:name=".Admin.TrackingOrder"
+      android:label="@string/title_activity_tracking_order" />
+    <activity
+      android:name=".ViewOrders"
+      android:screenOrientation="portrait" />
+    <activity android:name=".Admin.ViewOrdersAdmin" />
+    <activity
+      android:name=".ViewCartOrder"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity android:name=".PhotoUploadList" />
+    <activity android:name=".UserUploads">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".Admin.HomeAdmin"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity> <!-- <meta-data -->
+    <!-- android:name="com.google.android.geo.API_KEY" -->
+    <!-- android:value="AIzaSyBuc4uZOJ9T6ygb-5l5MQW628GkKZU-a8M"/> -->
+    <activity
+      android:name=".Home"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.FullScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".SplashActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.FullScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".Articles"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.FullScreen" />
+    <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+    <activity
+      android:name=".SignUpAcitivity"
+      android:launchMode="singleTop"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity
+      android:name=".SignInAcitivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.FullScreen" />
+    <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+    <!-- <meta-data -->
+    <!-- android:name="com.google.android.geo.API_KEY" -->
+    <!-- android:value="@string/google_maps_key" /> -->
+    <activity
+      android:name=".LoginActivity"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".AccessoryListScreen"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".BikeDetailsActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".Admin.BikeListScreenAdmin"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".BikeListScreen"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+
+    <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="@string/google_maps_key" />
+    <meta-data
+      android:name="com.google.mlkit.vision.DEPENDENCIES"
+      android:value="ocr" />
+    <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/gle_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+                <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        -->
+    <meta-data
+      android:name="com.facebook.accountkit.ApplicationName"
+      android:value="@string/app_name" />
+    <meta-data
+      android:name="com.razorpay.ApiKey"
+      android:value="rzp_live_vyPSpJi7gF28TF" />
+    <meta-data
+      android:name="com.facebook.accountkit.ClientToken"
+      android:value="@string/account_kit_client_token" />
+    <meta-data
+      android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+    <meta-data xmlns:tools="http://schemas.android.com/tools"
+      android:name="com.facebook.sdk.ApplicationId"
+      android:value="@string/facebook_application_id"
+      tools:replace="android:value" />
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_icon"
+      android:resource="@drawable/just_logo" />
+    <meta-data
+      android:name="com.google.firebase.messaging.default_notification_color"
+      android:resource="@color/colorAccent" />
+    <meta-data
+      android:name="preloaded_fonts"
+      android:resource="@array/preloaded_fonts" />
+
+    <provider
+      android:name="androidx.core.content.FileProvider"
+      android:authorities="com.just.justbikev2.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+
+      <!-- ressource file to create -->
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+    </provider>
+    <provider
+      android:name="com.facebook.FacebookContentProvider"
+      android:authorities="com.facebook.app.FacebookContentProvider1533729196787348"
+      android:exported="true" />
+
+    <receiver android:name=".Service.MyLocation" />
+
+    <service
+      android:name=".Service.MyFirebaseIdServiceClient"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+    <service
+      android:name=".Service.MyFirebaseMessaging"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+
+    <uses-library
+      android:name="org.apache.http.legacy"
+      android:required="false" />
+  </application>
+  <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+  <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+  <uses-feature
+    android:name="android.hardware.camera"
+    android:required="true" />
+  <uses-feature
+    android:name="android.hardware.camera.any"
+    android:required="true" />
+  <uses-feature
+    android:name="android.hardware.camera.autofocus"
+    android:required="false" />
+
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+
+  <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+</manifest>

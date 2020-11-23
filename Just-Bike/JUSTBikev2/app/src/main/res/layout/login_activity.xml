@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/seekbarSliderRelative"
+        android:background="@drawable/login_slider_background"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <SeekBar
+            android:id="@+id/seekbarSlider"
+            android:layout_width="match_parent"
+            android:thumbOffset="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/slider_thmb_circle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/seekbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Slide to Sign Up"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="20dp"
+        android:id="@+id/loginDetailsRelative"
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp">
+
+        <Button
+            android:id="@+id/test_form"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="open test form" />
+
+
+        <EditText
+            android:id="@+id/contactList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColorHighlight="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Username / Email ID"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/colorPrimary" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/mobile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Mobile(Not Right now)"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/colorPrimary"
+            android:visibility="invisible" />
+
+        <EditText
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactList"
+            android:layout_marginBottom="5dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            android:singleLine="true"
+            android:textColor="@color/input_login" />
+
+        <Button
+            android:id="@+id/forgotPass"
+            android:textColor="@color/google_btn_color"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/password"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Forgot Passwrod"/>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="20dip"
+            android:text="Login"
+            android:background="@drawable/login_button_background"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/view1"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:text="OR"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayoutFbGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+
+            android:orientation="vertical">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebookLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="14dp"
+                android:text="FACEBOOK">
+            </com.facebook.login.widget.LoginButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:background="@color/background" />
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/googleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

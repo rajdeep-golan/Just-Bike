@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@mipmap/sign_up_bg"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:transitionName="bikeName"
+            app:contentScrim="#0e0d0e"
+            app:expandedTitleTextAppearance="@android:color/transparent">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300sp"-->
+                <!--android:transitionName="bikeImage"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/bikeName"-->
+                <!--app:layout_constraintBottom_toBottomOf="@+id/bikeName"-->
+                <!--app:layout_collapseMode="parallax"-->
+                <!--&gt;-->
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/rvBikeImages"
+                 android:layout_width="match_parent"
+                 android:layout_height="350dp"
+                 android:transitionName="bikeImage"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_collapseMode="parallax"
+                 android:layout_centerInParent="true"
+                 android:foregroundGravity="center"
+                 android:clipToPadding="false"
+                 android:overScrollMode="never"/>
+            <!--</LinearLayout>-->
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="parallax"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.andremion.counterfab.CounterFab
+        android:id="@+id/addToCart_btn"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/ic_chrome_reader_mode_black_24dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end"
+        app:elevation="6dp"
+        app:useCompatPadding="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvBikeImages"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rating_btn"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/ic_stars_black_24dp"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|start"
+        app:useCompatPadding="true"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvBikeImages"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@drawable/bg_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="-10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:id="@+id/cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CC -"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/name"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        />
+                    <TextView
+                        android:id="@+id/ccValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250"
+                        android:fontFamily="@font/montserrat"
+                        app:layout_constraintLeft_toRightOf="@id/cc"
+                        app:layout_constraintTop_toBottomOf="@id/name"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                      />
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        app:layout_constraintLeft_toLeftOf="@id/cc"
+                        app:layout_constraintTop_toBottomOf="@id/cc"
+                        android:layout_marginTop="20dp"
+                        android:text="Year -"
+                        />
+                    <TextView
+                        android:id="@+id/yearValue"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/year"
+                        app:layout_constraintTop_toBottomOf="@id/cc"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="2018"
+                      />
+
+                    <TextView
+                        android:id="@+id/bhp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BHP -"
+                        app:layout_constraintLeft_toLeftOf="@id/cc"
+                        app:layout_constraintTop_toBottomOf="@id/year"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat"
+                        />
+
+                    <TextView
+                        android:id="@+id/bhpValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="17"
+                        app:layout_constraintLeft_toRightOf="@id/bhp"
+                        app:layout_constraintTop_toBottomOf="@id/year"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/mileage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mileage -"
+                        app:layout_constraintLeft_toLeftOf="@id/cc"
+                        app:layout_constraintTop_toBottomOf="@id/bhp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat"
+                        />
+
+                    <TextView
+                        android:id="@+id/mileageValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="30"
+                        app:layout_constraintLeft_toRightOf="@id/mileage"
+                        app:layout_constraintTop_toBottomOf="@id/bhp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tyre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tyre Size -"
+                        app:layout_constraintLeft_toLeftOf="@id/kilometers"
+                        app:layout_constraintTop_toTopOf="@id/bhp"
+                        android:fontFamily="@font/montserrat"
+                        />
+
+                    <TextView
+                        android:id="@+id/tyreValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="15.6"
+                        app:layout_constraintLeft_toRightOf="@id/tyre"
+                        app:layout_constraintTop_toTopOf="@id/tyre"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight [KG] -"
+                        android:fontFamily="@font/montserrat"
+                        app:layout_constraintTop_toTopOf="@id/cc"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="120dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/weightValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1200"
+                        android:fontFamily="@font/montserrat"
+                        app:layout_constraintTop_toTopOf="@id/weight"
+                        app:layout_constraintLeft_toRightOf="@id/weight"
+                        android:layout_marginLeft="10dp"
+
+                       />
+                    <TextView
+                        android:id="@+id/kilometers"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_height="wrap_content"
+                        android:text="KMS -"
+                        app:layout_constraintLeft_toLeftOf="@id/weight"
+                        app:layout_constraintTop_toTopOf="@id/year"
+
+                       />
+
+                    <TextView
+                        android:id="@+id/kilometersValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250/day"
+                        android:fontFamily="@font/montserrat"
+                        app:layout_constraintLeft_toRightOf="@id/kilometers"
+                        app:layout_constraintTop_toTopOf="@id/kilometers"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Cost - ₹"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <Spinner
+                        android:id="@+id/perTimingSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintLeft_toRightOf="@id/viewDocs"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/viewDocs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:text="1200"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toRightOf="@id/name"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDetails"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBarBike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="5"
+                        android:max="5"
+                        style="@style/AppThemeRatingBar"
+                        android:progressTint="#FFCC00"
+                        android:progressBackgroundTint="@color/grey"
+                        android:isIndicator="true"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+                    <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/white"
+                        app:layout_constraintLeft_toLeftOf="@id/ratingBarBike"
+                    app:layout_constraintTop_toBottomOf="@id/ratingBarBike"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="20dp"
+                    android:text="Details"
+                        android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsValue"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/details"
+                    app:layout_constraintLeft_toRightOf="@id/details"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="4dp"
+                    android:text="Sports Model with Disc Break ...."
+                    />
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bikeGif"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/companyIcon"
+                android:layout_marginBottom="20dp"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="80dp"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_gravity="bottom"
+
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/book_btn"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginRight="30dp"
+                android:background="@drawable/image_btn_onclick"
+                android:textAllCaps="false"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Book"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom">
+            <ImageButton
+                android:id="@+id/showCommentsBtn"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginRight="30dp"
+                android:background="@drawable/date_time_btn_bg"
+                android:textAllCaps="false"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/btn_red_bg"
+                android:text="Comments"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

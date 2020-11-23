@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/main_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:padding="10dp"
+    app:cardElevation="4dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/mapFrag"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+            <ImageView
+                android:id="@+id/transparent_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@android:color/transparent" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long Press to select"
+            android:layout_gravity="right"
+            android:textColor="@color/btn_red_bg"
+            android:textSize="12dp"/>
+       <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:weightSum="2"
+         android:orientation="horizontal">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/places"
+          android:layout_weight="1"
+            class="com.google.android.libraries.places.widget.AutocompleteSupportFragment" />
+         <EditText
+           android:id="@+id/buildingNo"
+           android:hint="Flat No./ House No.\nEg: 1st Floor, 15th Duplex"
+           android:drawableLeft="@drawable/ic_baseline_house_24"
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginLeft="4dp"
+           android:textSize="10dp"
+           android:drawablePadding="10dp"
+           android:drawableTint="@color/btn_red_bg"
+           android:backgroundTint="@color/btn_red_bg"
+           android:background="@drawable/edit_text_bg"
+           android:textCursorDrawable="@color/black"
+           android:paddingLeft="8dp"
+           android:fontFamily="@font/montserrat" />
+       </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/eTAddress"
+            android:hint="Address"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+          android:textSize="12dp"
+          android:drawablePadding="10dp"
+            android:backgroundTint="@color/btn_red_bg"
+            android:background="@drawable/edit_text_bg"
+            android:textCursorDrawable="@color/black"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+           android:fontFamily="@font/montserrat"
+            />
+        <ImageView
+            android:id="@+id/transparentImageViewAddress"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="60dp"
+            android:src="@android:color/transparent" />
+        </RelativeLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Current Location"
+                android:id="@+id/shipToThisAdd"
+                android:buttonTint="@color/btn_red_bg"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+              android:layout_margin="4dp"/>
+            <RadioButton
+                android:text="Home Address"
+                android:id="@+id/shipToHomeAdd"
+                android:buttonTint="@color/btn_red_bg"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+              android:layout_margin="4dp"/>
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextComment"
+            android:hint="Comments"
+            android:drawableLeft="@drawable/ic_insert_comment_black_24dp"
+            android:drawablePadding="10dp"  android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:backgroundTint="@color/btn_red_bg"
+            android:background="@drawable/edit_text_bg"
+          android:textSize="12dp"
+          android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:textCursorDrawable="@color/black"
+            android:fontFamily="@font/montserrat"
+            />
+        <ImageView
+            android:id="@+id/transparentImageViewComment"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:src="@android:color/transparent" />
+    </RelativeLayout>
+        <RelativeLayout
+          android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/eTPurpose"
+            android:hint="Purpose / Destination"
+            android:drawableLeft="@drawable/ic_golf_course_black_24dp"
+            android:drawablePadding="10dp"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:textCursorDrawable="@color/black"
+          android:textSize="12dp"
+          android:paddingLeft="20dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="@color/btn_red_bg"
+            android:paddingRight="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            />
+            <ImageView
+                android:id="@+id/transparentImageViewPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:src="@android:color/transparent" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            >
+        <TextView
+            android:id="@+id/etInCityRide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In City Ride"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/com_facebook_blue"
+            android:background="@drawable/suggestion_bg_capsule"
+            android:drawableLeft="@drawable/ic_location_city_black_24dp"/>
+        <TextView
+            android:id="@+id/etOutstationRide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="Outstation Trip"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            android:textColor="@color/com_facebook_blue"
+            android:background="@drawable/suggestion_bg_capsule"
+            android:drawableLeft="@drawable/ic_device_hub_black_24dp"/>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+            <ImageButton
+                android:id="@+id/addComment"
+                android:layout_width="353dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rememberMeCheckBox"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginRight="30dp"
+                android:background="@drawable/red_button_bg"
+                android:textAllCaps="false"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text="Get Location"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

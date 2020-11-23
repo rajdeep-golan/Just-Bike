@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg"
+    android:orientation="vertical">
+
+    <!--<TextView-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="#00000F"-->
+        <!--android:textAlignment="center"-->
+        <!--android:text="Just Bike"-->
+        <!--android:padding="15dp"-->
+        <!--android:fontFamily="@font/nexabold"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal" />-->
+    <!--<View-->
+        <!--android:background="#3700B3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_height="1dp"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="15dp">
+            <TextView
+                android:id="@+id/txt_prname"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:textColor="#00000F"
+                android:text="Gixxer"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/txt_prprice"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/montserrat"
+                android:layout_height="wrap_content"
+                android:text="Rs. 244"
+                android:textColor="#019E1B"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EC1C25"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="?android:selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/viewDetails"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+        <ImageView
+            android:src="@drawable/vehicle_details"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginLeft="25dp"
+            android:text="View Details"
+            android:textSize="15sp"
+            android:textColor="#00000F"
+            />
+
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="?android:selectableItemBackground"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:padding="12dp">-->
+        <!--<ImageView-->
+            <!--app:srcCompat="@drawable/ic_share_black_24dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"/>-->
+
+        <!--<TextView-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_marginStart="15dp"-->
+            <!--android:layout_marginLeft="25dp"-->
+            <!--android:text="Share via..."-->
+            <!--android:textSize="15sp"-->
+            <!--android:textColor="#00000F"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="?android:selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/cartLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+        <ImageView
+
+            android:src="@drawable/package_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/cartTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Add To Pacakge"
+            android:textSize="15sp"
+            android:textColor="#00000F"
+            />
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btn_book"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+
+            android:layout_marginRight="30dp"
+            android:background="@drawable/image_btn_onclick"
+            android:textAllCaps="false"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/white"
+            android:text="Book Now"
+            />
+    </FrameLayout>
+
+
+
+</LinearLayout>

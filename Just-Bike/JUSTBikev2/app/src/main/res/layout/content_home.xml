@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeLayout"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/bike_bg_clorful"
+    tools:context=".Home"
+    tools:showIn="@layout/app_bar_home">
+
+    <RelativeLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/back_ground"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:src="@drawable/bg_overlay"
+            android:contentDescription="TODO" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleNav"
+        android:textSize="28dp"
+      android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/ic_baseline_menu_24"
+        android:drawablePadding="-30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fontFamily="@font/montserrat"
+        android:text="JUST Bike"/>
+
+    <!--<androidx.cardview.widget.CardView-->
+        <!--android:id="@+id/advertisementCard"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:cardCornerRadius="10dp"-->
+        <!--app:cardElevation="10dp"-->
+        <!--app:cardBackgroundColor="@android:color/transparent"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/toggleNav">-->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleNav"
+        android:id="@+id/shimmer"
+        app:shimmer_auto_start="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <include layout="@layout/shimmer_item" />
+            <include layout="@layout/shimmer_item" />
+            <include layout="@layout/shimmer_item" />
+            <!--<ImageView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:id="@+id/shimmerImage"/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/colorShimmer"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:fontFamily="@font/montserrat"-->
+            <!--android:id="@+id/shimmerText"/>-->
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/recyclerViewMAdvertisement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <!--</androidx.cardview.widget.CardView>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chooseCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shimmer">
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chooseTiming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/categoryCard"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:cardElevation="10dp">
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli"
+            android:textSize="24dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:text="Schedule a Vehicle"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="6dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/startDate"
+                android:text="Start Date"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/calender_tv"
+                android:drawablePadding="2dp"
+                android:padding="15px"
+                android:background="@drawable/date_time_btn_bg"
+                android:fontFamily="@font/montserrat"
+                android:layout_margin="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/calender_tv"
+                android:textSize="14dp"
+                android:id="@+id/endDate"
+                android:drawablePadding="2dp"
+                android:textColor="@color/black"
+                android:text="End Date  "
+                android:padding="15px"
+                android:fontFamily="@font/montserrat"
+                android:background="@drawable/date_time_btn_bg"
+                android:layout_margin="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/startDate"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/startTime"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_margin="12dp"
+                android:padding="15px"
+                android:text="Start Time"
+                android:background="@drawable/date_time_btn_bg"
+                android:drawableLeft="@drawable/ic_av_timer_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/endTime"
+                android:textSize="14dp"
+                android:padding="15px"
+                android:drawablePadding="2dp"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/montserrat"
+                android:background="@drawable/date_time_btn_bg"
+                android:text="End Time  "
+                android:drawableLeft="@drawable/ic_av_timer_black_24dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startTime"
+                />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endTime"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageButton
+                    android:id="@+id/finbikeBtn"
+                    android:layout_width="223dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:paddingRight="140dp"
+                    app:srcCompat="@drawable/ic_search_black_24dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/image_btn_onclick"
+                    android:textAllCaps="false"
+                    android:textSize="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/white"
+                    android:text="Find Vehicles"
+                    />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/categoryCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseCity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/muli"
+                android:text="Category"/>
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:padding="4dp"
+                android:id="@+id/shimmerCategory"
+                app:shimmer_auto_start="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include layout="@layout/shimmer_category" />
+                    <include layout="@layout/shimmer_category" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:padding="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerViewMenuHome"
+                android:scrollbars="vertical">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/chooseTiming"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:backgroundTint="@color/overlayBackground"
+        android:text="Articles"
+        android:visibility="gone"
+        android:layout_margin="4dp"
+        android:id="@+id/viewArticles"
+        />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/chooseTiming"
+    android:id="@+id/feedbackRV"/>
+    <com.glide.slider.library.SliderLayout
+        android:id="@+id/sliderBanner"
+        android:layout_width="match_parent"
+        app:layout_constraintCircleRadius="4dp"
+        android:background="@color/white"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/feedbackRV"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="©2020 jbida.com Seattle , USA"
+        app:layout_constraintTop_toBottomOf="@id/sliderBanner"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:gravity="center"
+        android:drawableLeft="@drawable/clock_tv"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/muli"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

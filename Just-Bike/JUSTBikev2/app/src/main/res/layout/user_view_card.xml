@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="300dp"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  app:cardCornerRadius="10dp"
+  app:cardElevation="10dp"
+  app:cardBackgroundColor="@color/white"
+  android:layout_margin="4dp"
+  android:outlineSpotShadowColor="@color/black">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:id="@+id/relativeCardView">
+    <ImageView
+      android:id="@+id/bikeImageBlur"
+      android:layout_width="match_parent"
+      android:layout_height="225dp"
+      android:src="@drawable/cbr250r"
+      android:visibility="invisible"
+      android:background="@android:color/transparent"
+      app:layout_constraintLeft_toRightOf="@id/viewDark"
+      android:layout_marginTop="6dp"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+    <ImageView
+      android:id="@+id/bikeImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="0dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+
+      android:background="@android:color/transparent"
+      android:src="@drawable/biker"
+      android:scaleType="fitCenter"
+      android:transitionName="bikeImage"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+    <androidx.cardview.widget.CardView
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:layout_width="wrap_content"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="4dp"
+      android:padding="4dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/white"
+      android:layout_height="wrap_content">
+      <TextView
+        android:id="@+id/verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4CD964"
+        android:padding="4dp"
+        android:textSize="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Verified"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:layout_width="wrap_content"
+      android:layout_margin="10dp"
+      app:cardCornerRadius="4dp"
+      android:padding="4dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/white"
+      android:layout_height="wrap_content">
+      <TextView
+        android:id="@+id/wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange_btn"
+        android:padding="4dp"
+        android:textSize="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Wallet"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+      android:id="@+id/mileage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="4dp"
+      android:text="Mileage  :"
+      android:textColor="@color/black"
+      android:visibility="invisible"
+      android:fontFamily="@font/montserrat"
+      app:layout_constraintLeft_toRightOf="@id/viewDark"
+      app:layout_constraintTop_toTopOf="@id/viewDark" />
+
+    <TextView
+      android:id="@+id/mileageValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="4dp"
+      android:text="20"
+      android:fontFamily="@font/montserrat"
+      android:textColor="@color/black"
+      android:visibility="invisible"
+      app:layout_constraintLeft_toRightOf="@id/mileage"
+      app:layout_constraintTop_toTopOf="@id/mileage" />
+
+    <View
+      android:id="@+id/viewDark"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:layout_marginTop="1000dp"
+      android:background="@drawable/bg_shadow"
+      app:layout_constraintBottom_toBottomOf="@+id/bikeImage"
+      />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Name "
+      android:textColor="@color/white"
+      android:fontFamily="@font/montserrat"
+      android:layout_marginRight="4dp"
+      app:layout_constraintTop_toBottomOf="@id/phoneNo"
+      app:layout_constraintLeft_toLeftOf="@id/phoneNo"
+      android:layout_marginTop="2dp"
+      android:id="@+id/name"/>
+    <TextView
+      android:layout_width="wrap_content"
+      android:id="@+id/viewDocs"
+      android:layout_height="wrap_content"
+      android:text="VIEW DOCS"
+      android:fontFamily="@font/nexabold"
+      android:textColor="@color/white"
+      android:textSize="12dp"
+      android:padding="4dp"
+      android:background="@drawable/suggestion_bg_capsule"
+      android:backgroundTint="@color/Blue"
+      app:layout_constraintTop_toTopOf="@id/phoneNo"
+      app:layout_constraintBottom_toBottomOf="@id/phoneNo"
+      app:layout_constraintLeft_toRightOf="@id/phoneNo"
+      android:layout_marginLeft="10dp"
+      />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="+91897213147"
+      android:textStyle="bold"
+      android:fontFamily="@font/montserrat"
+      android:textColor="@color/white"
+      android:id="@+id/phoneNo"
+      android:transitionName="bikeName"
+      app:layout_constraintTop_toBottomOf="@id/bikeImageBlur"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:layout_marginLeft="10dp"
+      android:textSize="22dp"/>
+
+
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:srcCompat="@drawable/ic_location_on_white_24dp"
+      android:layout_marginRight="10dp"
+      android:id="@+id/locationIcon"
+      android:textColor="@color/white"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/bikeImageBlur"/>
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:srcCompat="@drawable/ic_baseline_contacts_24"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:id="@+id/contactsIcon"
+      android:textColor="@color/white"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/locationIcon"/>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

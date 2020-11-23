@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/orders"
+          android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_banner"
+            android:icon="@drawable/ic_live_tv_black_24dp"
+            android:title="Live Chat" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Profile" />
+
+      <item
+        android:id="@+id/rateUs"
+        android:icon="@drawable/ic_star_full_48dp"
+        android:iconTint="@color/white"
+        android:title="Rate Us" />
+
+
+            <item
+                android:id="@+id/nav_changePass"
+                android:icon="@drawable/ic_security_black_24dp"
+                android:title="Change Password" />
+
+            <item
+                android:id="@+id/nav_home_address"
+                android:icon="@drawable/ic_home_black_24dp"
+                android:title="Home Address" />
+          <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Careers" />
+      <item
+        android:id="@+id/nav_franchise"
+        android:icon="@drawable/ic_baseline_local_convenience_store_24"
+        android:title="Franchise" />
+      <item
+        android:id="@+id/nav_pickup"
+        android:icon="@drawable/ic_baseline_storefront_24"
+        android:title="Pickup Point" />
+          <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_settings_power_24"
+            android:title="Logout" />
+
+    </group>
+</menu>
