@@ -1,0 +1,18 @@
+{
+  "particles":{
+    "number":{
+      "value":400
+      }
+     },
+     "opacity"{
+      "value":0.5,
+      "random":true,
+      "anim":{
+        "enable":true
+        }
+       },
+     "size":{
+        "value":5
+       }
+     }    
+}

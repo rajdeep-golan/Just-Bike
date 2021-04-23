@@ -1,0 +1,214 @@
+/* --------------------------------------------------------
+Style Sheet for Jacuzzi parlour website
+author: Rajdeep Singh Golan
+----------------------------------------------------------*/
+@font-face { font-family: Eurostile; src: url('EurostileExtended.otf') format('opentype'); } 
+body {
+    font-family:Eurostile;
+    margin: 0;
+    padding: 0;
+    font-family: Eurostile; src: url('EurostileExtended.otf') format('opentype');
+    /*font-family: 'Ubuntu', sans-serif;*/
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+h1 { font-family: Eurostile; }
+/* LEFT HALF */
+
+.main-left-column {
+    background: linear-gradient(#FF7F50, #130b22);
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+}
+
+.sticky-sidebar {
+    position: fixed;
+    width: 50%;
+}
+
+.main-left-column h1 {
+    margin-bottom: 0;
+}
+
+.nameplate {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-default {
+    background-color: Transparent;
+    border: 1px solid white;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.interests {
+    background-color: Transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.social-icons i {
+    padding-left: 10px;
+}
+
+.social-icons a {
+    color: white;
+}
+
+.social-icons a:hover {
+    text-decoration: none;
+}
+
+/* PARTICLES JS */
+
+.particles-js {
+    width: 100vw;
+    z-index: -1;
+}
+
+/* SCROLL DOWN ICON */
+
+.scroll-down {
+    top: 70vh;
+    position: absolute;
+}
+
+.scroll-down a:active {
+    color: white;
+}
+
+.scroll-down a:hover {
+    color: white;
+}
+
+.fa-2x {
+    color: white;
+}
+
+.arrow {
+    text-align: center;
+    margin: 8% 0;
+}
+
+.bounce {
+    -moz-animation: bounce 2s 3;
+    -webkit-animation: bounce 2s 3;
+    animation: bounce 2s 3;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* RIGHT HALF */
+
+.main-right-column {
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+.text-element {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+}
+
+.text-element h6 {
+    padding-top: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #3F51B5;
+}
+
+.bullet-item {
+    padding-bottom: 20px;
+}
+
+.bullet-item h5 {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.tags {
+    font-size: 10px;
+    padding: 2px;
+    border-radius: 3px;
+    border-color: #6c757d;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.tag-cloud {
+    margin-top: 10px;
+}
+
+.particles-js-canvas-el {
+    height: 100vh!important;
+}
+
+.bullet-item-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media only screen and (max-width: 600px) {
+    .sticky-sidebar {
+        position: absolute;
+        width: 100vw;
+    }
+
+    .main-left-column {
+        position: relative;
+    }
+
+    .particles-js-canvas-el {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .skills {
+        width: 50%;
+    }
+}
