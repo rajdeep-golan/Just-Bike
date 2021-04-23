@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Add meta description/title -->
+				<title>Just Bike - Self Ride Bike Rental Service</title>
+				
+			
+				<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,900" rel="stylesheet">
+					
+						<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+								<link rel="stylesheet" type="text/css" href="css1/bootstrap.min.css">
+									<link rel="stylesheet" type="text/css" href="css1/style.css">
+                  <link rel="stylesheet" type="text/css" href="css1/style1.css">
+    <link href="css/app.d0b049e5.css" rel="stylesheet">
+   
+									</head>
+									<body>
+                    <form id="myform" onsubmit="add();return false">
+										<div class="shade">
+    <div class="blackboard">
+        <div class="form">
+            <p>
+                <label>Heading: </label>
+                <input type="text" name="heading" id="heading" />
+            </p>
+             <p>
+                <label>Heading Link: </label>
+                <input type="text" name="headingLink" id="headingLink" />
+            </p>
+            <p>
+                <label>Content: </label>
+                <input type="text" name="content" id="content"/>
+            </p>
+            <p>
+                <label>Inbound Text: </label>
+                <input type="text" name="otherText" id="otherText"/>
+            </p>
+            <p>
+                <label>Inbound Link: </label>
+                <input type="text" name="otherLink" id="otherLink"/>
+            </p>
+            <p>
+                <label>Image: </label>
+                <input  type="file" accept="image/*" id="input-image" name="input-image" >
+                
+            </p>
+            <br/>
+            <p>
+                <label>Outbound Text: </label>
+                <input type="text" name="otherText2" id="otherText2"/>
+            </p>
+            <p>
+                <label>Outbound Link: </label>
+                <input type="text" name="otherLink2" id="otherLink2"/>
+            </p>
+            <p class="wipeout">
+              <br/>
+                 <button id="submit" style="text-align: center;" class="btn waves-effect waves-light">Submit</button>
+            </p>
+            <label id="progressStatus"></label>
+        </div>
+    </div>
+</div>
+</form>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDCGnxKbqcPWBM2NjDGKM9udTaF50LNIuQ",
+    authDomain: "jbweb-e1d5a.firebaseapp.com",
+    projectId: "jbweb-e1d5a",
+    storageBucket: "jbweb-e1d5a.appspot.com",
+    messagingSenderId: "618894190698",
+    appId: "1:618894190698:web:dd508cc0735f139afe0213",
+    measurementId: "G-F931MXLHXY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+ <script src="js1/article.js"></script>
+
+									</body>
+									</html>
